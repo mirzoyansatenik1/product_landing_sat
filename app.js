@@ -274,12 +274,18 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
 
 /**
  * Gallery Filter Functionality
+ * - Filters gallery items by category
+ * - Supports: All, Shampoos, Conditioners, Treatments
+ * - Smooth fade animation on filter change
  */
 function initGallery() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
     
     if (!filterBtns.length || !galleryItems.length) return;
+    
+    // Add item count to filter buttons
+    updateFilterCounts();
     
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -316,8 +322,39 @@ function initGallery() {
                 transform: scale(1);
             }
         }
+        
+        .filter-btn .count {
+            display: inline-block;
+            background: rgba(0, 0, 0, 0.1);
+            padding: 0.1rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            margin-left: 0.25rem;
+        }
+        
+        .filter-btn.active .count {
+            background: rgba(255, 255, 255, 0.2);
+        }
     `;
     document.head.appendChild(style);
+    
+    function updateFilterCounts() {
+        filterBtns.forEach(btn => {
+            const filter = btn.dataset.filter;
+            let count;
+            
+            if (filter === 'all') {
+                count = galleryItems.length;
+            } else {
+                count = Array.from(galleryItems).filter(item => item.dataset.category === filter).length;
+            }
+            
+            // Add count badge if not exists
+            if (!btn.querySelector('.count')) {
+                btn.innerHTML += ` <span class="count">${count}</span>`;
+            }
+        });
+    }
 }
 
 /**
