@@ -318,9 +318,12 @@ function initActiveSectionHighlight() {
 
 /**
  * CTA Modal Functionality
+ * - Opens on "Get Started" and "Shop Now" clicks
+ * - Closes via: close button, backdrop click, Escape key
+ * - Includes form with name and email fields
  */
 function initCTAModal() {
-    // Create modal HTML
+    // Create modal HTML dynamically
     const modalHTML = `
         <div class="modal-overlay" id="cta-modal">
             <div class="modal-content">
