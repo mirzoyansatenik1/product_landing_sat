@@ -1,14 +1,40 @@
 # Luxe Hair - Premium Hair Care Landing Page
 
-A beautiful, modern landing page for a luxury hair care brand. Built with vanilla HTML, CSS, and JavaScript for optimal performance and easy customization.
+A beautiful, modern landing page for a luxury hair care brand. Built with vanilla HTML, CSS, and JavaScript for optimal performance.
 
 ## 🌟 Features
 
-- **Responsive Design** - Looks great on all devices (mobile, tablet, desktop)
-- **Modern UI/UX** - Clean, luxurious aesthetic with smooth animations
-- **Accessible** - Semantic HTML and ARIA attributes
-- **Fast Loading** - No frameworks, pure vanilla code
-- **SEO Friendly** - Proper meta tags and semantic structure
+### v1 (Base Features)
+- **Hero Section** - Product name, tagline, and CTA buttons
+- **Product Showcase** - 4 product cards with images and pricing
+- **Benefits Section** - 4 key selling points with emoji icons
+- **Testimonials** - 3 customer reviews
+- **Pricing Section** - 3 subscription tiers (Essentials, Complete Care, Luxe Suite)
+- **Newsletter Signup** - Email subscription form
+- **Footer** - Social links (Instagram, Facebook, X, YouTube) + copyright
+
+### Design Features
+- Responsive design (mobile, tablet, desktop)
+- Smooth scroll animations
+- Hover effects on cards and buttons
+- Modern, luxurious aesthetic with warm gold & cream palette
+- Semantic HTML5 structure
+
+## 🚀 How to Run Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/mirzoyansatenik1/product_landing_sat.git
+   ```
+
+2. Navigate to the project folder:
+   ```bash
+   cd product_landing_sat
+   ```
+
+3. Open `index.html` in your browser:
+   - Double-click the file, or
+   - Use a local server: `npx serve` or VS Code Live Server
 
 ## 📁 Project Structure
 
@@ -17,51 +43,32 @@ product_landing_sat/
 ├── index.html          # Main HTML file
 ├── styles.css          # All styles and responsive design
 ├── app.js              # JavaScript functionality
-├── assets/             # Images, icons, and media
-│   ├── images/         # Product and hero images
-│   └── icons/          # SVG icons and favicon
+├── assets/             # Images and icons
+│   ├── images/
+│   └── icons/
 └── README.md           # Project documentation
 ```
 
-## 🚀 Getting Started
-
-1. Clone the repository
-2. Open `index.html` in your browser
-3. Start customizing!
-
 ## 🎨 Customization
 
-### Colors
-Edit the CSS variables in `styles.css`:
-
+### Colors (CSS Variables)
 ```css
-:root {
-    --color-primary: #8B6914;      /* Gold/amber accent */
-    --color-secondary: #1A1A1A;    /* Dark text/buttons */
-    --color-accent: #D4A574;       /* Warm accent */
-    --color-background: #FDFBF7;   /* Cream background */
-}
+--color-primary: #8B6914;      /* Gold accent */
+--color-secondary: #1A1A1A;    /* Dark text */
+--color-background: #FDFBF7;   /* Cream background */
 ```
 
-### Typography
-The site uses two Google Fonts:
-- **Cormorant Garamond** - Elegant serif for headings
-- **Outfit** - Modern sans-serif for body text
+### Fonts
+- **Headings**: Cormorant Garamond (elegant serif)
+- **Body**: Outfit (modern sans-serif)
 
-### Images
-Replace placeholder images in the `assets/images/` folder:
-- Hero image (recommended: 800x1000px)
-- Product images (recommended: 600x600px)
+## 🔀 Branches
 
-## 📱 Sections
-
-1. **Navigation** - Fixed header with smooth scroll links
-2. **Hero** - Full-height intro with CTA buttons
-3. **Products** - Grid of featured products
-4. **Benefits** - Key selling points with icons
-5. **Testimonials** - Customer reviews
-6. **Newsletter** - Email signup form
-7. **Footer** - Links and brand info
+| Branch | Description | Status |
+|--------|-------------|--------|
+| `main` | Production-ready v1 landing page | ✅ Stable |
+| `feature/ux-enhancements` | Sticky navbar, smooth scroll, CTA modal with form validation | 🔄 PR Open |
+| `feature/showcase-interactions` | Product gallery with lightbox and filters | 🔄 PR Open |
 
 ## 🛠️ Technologies
 
@@ -69,6 +76,10 @@ Replace placeholder images in the `assets/images/` folder:
 - CSS3 (Custom Properties, Grid, Flexbox)
 - Vanilla JavaScript (ES6+)
 - Google Fonts
+
+## 👥 Team
+
+- Sat Mirzoyan (@mirzoyansatenik1)
 
 ## 📄 License
 
